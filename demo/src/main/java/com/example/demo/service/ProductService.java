@@ -14,8 +14,10 @@ public class ProductService {
 		List<Product> products = new ArrayList<>();
 		Product p1 = new Product(1, "Prod1");
 		Product p2 = new Product(2, "Prod2");
+		Product p3 = new Product(3, "Prod3");
 		products.add(p1);
 		products.add(p2);
+		products.add(p3);
 		return products; 
 	}
 }
