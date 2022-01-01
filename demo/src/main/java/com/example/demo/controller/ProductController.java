@@ -1,23 +1,22 @@
 package com.example.demo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Product;
+import com.example.demo.service.ProductService;
 
 @RestController
 public class ProductController {
 
+	@Autowired
+	private ProductService productService;
+	
 	@GetMapping("/products")
 	public List<Product> getProducts() {
-		List<Product> products = new ArrayList<>();
-		Product p1 = new Product(1, "Prod1");
-		Product p2 = new Product(2, "Prod2");
-		products.add(p1);
-		products.add(p2);
-		return products; 
+		return productService.getProducts();
 	}
 }
