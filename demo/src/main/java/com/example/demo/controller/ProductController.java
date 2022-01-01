@@ -18,6 +18,6 @@ public class ProductController {
 		Product p2 = new Product(2, "Prod2");
 		products.add(p1);
 		products.add(p2);
-		return products;
+		return products; 
 	}
 }
